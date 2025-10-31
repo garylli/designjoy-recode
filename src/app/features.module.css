@@ -1,0 +1,22 @@
+@layer components {
+  .polaroids-container {
+    display: grid;
+    grid-template-columns: auto [base];
+    grid-template-rows: auto [base];
+  }
+
+  .polaroids-container > * {
+    grid-area: base;
+  }
+
+  .polaroid {
+    transform-origin: 20% 80%;
+    transform: rotate(var(--rotation));
+    transition-property: all;
+    transition-timing-function: ease-out;
+    transition-duration: 600ms;
+  }
+  .group:hover {
+    transform: rotate(var(--hover-rotation));
+  }
+}

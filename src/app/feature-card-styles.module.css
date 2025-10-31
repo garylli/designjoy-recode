@@ -1,0 +1,57 @@
+.card-container {
+  position: relative;
+  isolation: isolate;
+  height: 440px;
+  border-radius: 19px;
+  overflow: hidden;
+}
+
+.card-container__background {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  width: 100%;
+}
+
+.card-body {
+  position: absolute;
+  inset: auto 0% 0%;
+  padding: 72px 32px 32px;
+  height: 200px;
+}
+
+.feature-card-0 .card-body {
+  --color-bg: #f7a635;
+  background: linear-gradient(
+    #ffd90000 -3% 3%,
+    #ffdb01bf 28%,
+    #ffdb01db 57%,
+    #ffdb01 100%,
+    #ffdb01
+  );
+}
+
+.feature-card-1 .card-body {
+  color: white;
+  background: linear-gradient(
+    rgba(1, 120, 231, -3%) 3%,
+    rgba(39, 136, 227, 0.707) 28%,
+    rgb(30, 137, 237) 57%,
+    rgb(1, 119, 231)
+  );
+}
+
+.feature-card-2 .card-body {
+  color: white;
+  background: linear-gradient(
+    rgba(255, 60, 0, 0) 3%,
+    rgba(255, 68, 0, 0.75) 28%,
+    rgb(255, 55, 0) 57%,
+    rgb(255, 42, 0)
+  );
+}
+
+.card-subtitle {
+  filter: opacity(0.7);
+  /* color: color-mix(in srgb, currentColor 80%); */
+}

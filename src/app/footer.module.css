@@ -1,0 +1,8 @@
+@media screen and (min-width:900px) {
+.container {
+  display: grid;
+  grid-template-columns: [left] 3fr [right] 2fr;
+  grid-auto-flow: row;
+  gap: calc(12*var(--spacing));
+}
+}

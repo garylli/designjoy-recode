@@ -1,0 +1,7 @@
+@import './animations.module.css';
+
+@layer components {
+  .card {
+    animation: 20s undulate infinite alternate linear;
+  }
+}

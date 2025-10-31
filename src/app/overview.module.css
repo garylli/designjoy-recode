@@ -1,0 +1,18 @@
+@layer components {
+  .overview-container {
+    --border-radius: 19px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    padding: var(--horz-padding) 40px;
+    line-height: 140%;
+    border: 2px dashed var(--color-border);
+    color: var(--color-dark-linen);
+    max-width: 70ch;
+    margin-inline: auto;
+  }
+
+  .story-text {
+    line-height: 140%;
+    text-align: center;
+  }
+}

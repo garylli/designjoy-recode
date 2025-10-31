@@ -1,0 +1,65 @@
+@import './utilities.css';
+
+@layer components {
+  .card {
+    --perks-bg: #2d2d2d;
+    --perks-bg-gradient: linear-gradient(#232323 30%, #141414);
+    --perks-rounding: 12px;
+    --shadow:
+      inset 1px 1px 1px 0px rgb(from var(--color-background) r g b / 10%),
+      inset 0px 2px 3px 0px rgb(from var(--color-background) r g b / 30%),
+      0 2px 8px 0px rgb(from var(--color-foreground) r g b / 50%);
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    padding: 32px;
+    width: 100%;
+    background: var(--black);
+    color: var(--color-background);
+    border-radius: var(--border-radius);
+    box-shadow:
+      0 0 0 1px rgb(from var(--color-foreground) r g b / 100%),
+      inset 1px 1px 2px 0px rgb(from var(--color-background) r g b / 50%),
+      inset 0px 0.5px 0px 0px rgb(from var(--color-background) r g b / 80%),
+      0 2px 8px 0px rgb(from var(--color-foreground) r g b / 50%);
+  }
+
+  .perks {
+    font-size: 14px;
+    line-height: 24px;
+    background: var(--perks-bg-gradient);
+    position: relative;
+    padding: 32px;
+    /* column-width:20ch; */
+    color: var(--color-background);
+    border-radius: var(--perks-rounding);
+    box-shadow: var(--shadow);
+    white-space: nowrap;
+  }
+
+  .perks > ul {
+    max-width: 100%;
+    column-width: 16ch;
+    column-count: 2;
+  }
+  .perks__tag {
+    position: absolute;
+    top: 0;
+    transform: translate(0%, -60%);
+    text-transform: uppercase;
+    color: var(--color-dark-gray);
+    background: var(--perks-bg-gradient);
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    @apply text-flavor;
+  }
+
+  .cta {
+    margin-top: 32px;
+    box-shadow: var(--shadow);
+    background: var(--perks-bg-gradient);
+    padding: 8px;
+    border-radius: 8px;
+  }
+}

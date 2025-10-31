@@ -1,0 +1,18 @@
+@layer components {
+
+
+.button-container {
+  width: 100%;
+  padding: 18px 0px;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 100ms ease-in;
+}
+
+.button-container:hover {
+  transition: all 100ms ease-out;
+  filter: invert();
+  /* background-color: var(--color-foreground); */
+  /* color: white; */
+}
+}

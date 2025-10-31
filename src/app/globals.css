@@ -1,15 +1,85 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import 'tailwindcss';
+@import './colors.css';
+@import './utilities.css';
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --button-radius:10px;
+  --border-radius: 19px;
+  --black: black;
+  --orange-red: #ea552b;
+  --gold: #fdd900;
+  --indian-red: #f7414e;
+  --orange: #fb421f;
+  --midnight-blue: #130933;
+  --lime: #61f15c;
+  --white: white;
+  --white-smoke: #f6f9fc;
+  --medium-sea-green: #2cc05a;
+  --royal-blue: #0c77f8;
+  --lavender-blush: #f5e8f8;
+  --indigo: #3a2099;
+  --royal-blue-2: #0052ff;
+  --dark-slate-blue: #3e396b;
+  --cornflower-blue: #8994c6;
+  --dodger-blue: #097fff;
+  --ghost-white: #f3f6ff;
+  --deep-sky-blue: #0ab3e4;
+  --main-text: #162944;
+  --white-smoke-2: #f8f9fc;
+  --slate-blue: #1a49dd;
+  --slate-grey: #6b7c93;
+  --light-steel-blue: #94a7c2;
+  --royal-blue-3: #05f;
+  --dodger-blue-2: #09f;
+  --dodger-blue-3: #09f;
+  --purple: #80376b;
+  --orange-2: #fd9800;
+  --linen: #fbe8de;
+  --breakpoint-lg: 1100px;
+}
+
+@layer base {
+  :root {
+    --background: #ece6e8;
+    --foreground: #171717;
+    --border-radius: 19px;
+  }
+
+  h1 {
+    @apply heading-1;
+  }
+
+  h2 {
+    @apply heading-2;
+  }
+
+  h3 {
+    @apply heading-3;
+  }
+
+  h4 {
+    @apply heading-4;
+  }
+
+  h5 {
+    @apply heading-5;
+  }
+
+  h6 {
+    @apply heading-6;
+  }
+
+}
+
+body {
+  --font-sans: var(--font-figtree);
+  --font-serif: var(--font-instrument-serif);
   --font-mono: var(--font-geist-mono);
+  line-height: 20px;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-style: normal;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +89,30 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+button {
+  cursor: pointer;
+}
+
+#marquee-1 {
+  display: flex;
+  right: 0;
+  animation: scroll 10s linear infinite;
+}
+
+#marquee-2 {
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+
+.marquee {
+  min-width: 100%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

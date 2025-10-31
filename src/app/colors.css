@@ -1,0 +1,39 @@
+@theme inline {
+  --color-*: initial;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: #dbd6d2;
+  --color-black: rgb(0, 0, 0);
+  --color-orange-red: rgb(234, 85, 43);
+  --color-gold: rgb(253, 217, 0);
+  --color-indian-red: rgb(247, 65, 78);
+  --color-orange: rgb(251, 66, 31);
+  --color-midnight-blue: rgb(19, 9, 51);
+  --color-lime: rgb(97, 241, 92);
+  --color-white: rgb(255, 255, 255);
+  --color-white-smoke: rgb(246, 249, 252);
+  --color-medium-sea-green: rgb(44, 192, 90);
+  --color-royal-blue: rgb(12, 119, 248);
+  --color-lavender-blush: rgb(245, 232, 248);
+  --color-indigo: rgb(58, 32, 153);
+  --color-royal-blue-2: rgb(0, 82, 255);
+  --color-dark-slate-blue: rgb(62, 57, 107);
+  --color-cornflower-blue: rgb(137, 148, 198);
+  --color-dodger-blue: rgb(9, 127, 255);
+  --color-ghost-white: rgb(243, 246, 255);
+  --color-deep-sky-blue: rgb(10, 179, 228);
+  --color-main-text: rgb(22, 41, 68);
+  --color-white-smoke-2: rgb(248, 249, 252);
+  --color-slate-blue: rgb(26, 73, 221);
+  --color-slate-grey: rgb(107, 124, 147);
+  --color-light-steel-blue: rgb(148, 167, 194);
+  --color-royal-blue-3: rgb(0, 85, 255);
+  --color-dodger-blue-2: rgb(0, 153, 255);
+  --color-dodger-blue-3: rgb(0, 153, 255);
+  --color-purple: rgb(128, 55, 107);
+  --color-orange-2: rgb(253, 152, 0);
+  --color-linen: rgb(251, 232, 222);
+  /* --color-dark-linen: #655f58; */
+  --color-dark-linen: #938c85;
+  --color-dark-gray: #99948f;
+}
