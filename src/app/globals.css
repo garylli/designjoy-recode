@@ -47,7 +47,7 @@
 
   h1 {
     @apply heading-1;
-  }
+}
 
   h2 {
     @apply heading-2;

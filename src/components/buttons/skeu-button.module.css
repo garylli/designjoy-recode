@@ -1,6 +1,6 @@
 @layer components {
   .button-container {
-    padding: 6px 20px;
+    padding: 8px 20px;
     background: linear-gradient(#313131, var(--color-foreground) 70%);
     color: var(--color-background);
     font-weight: 500;

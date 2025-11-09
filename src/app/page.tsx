@@ -52,8 +52,8 @@ const FloatingCard = (props: { className?: string }) => {
 
 const Playground = () => {
   return (
-    <div className={'flex h-screen items-center justify-stretch px-8'}>
-      <NavBar />
+    <div className={'flex h-screen items-center justify-center  px-8'}>
+      <CaseStudies />
     </div>
   );
 };
@@ -118,7 +118,6 @@ function Page() {
       <Benefits />
       <PressMentions />
       <CaseStudies className={'pt-20'} />
-      <FeatureList />
       <SocialProof />
       <Pricing className={'pt-16 pb-20'} />
       <FAQ />
@@ -145,7 +144,7 @@ const Hero = () => {
         <div className={'inner-container'}>
           <div
             className={
-              'flex flex-col lg:flex-row [--top-padding:40px] lg:gap-8'
+              'flex flex-col lg:flex-row [--top-padding:40px] lg:gap-12'
             }
           >
             <div className={'w-full'}>
@@ -164,7 +163,7 @@ const Hero = () => {
               <JoinCard className={'lg:hidden'} />
             </div>
             <JoinCard
-              className={'max-lg:hidden mt-[var(--top-padding)] min-w-fit'}
+              className={'max-lg:hidden mt-[var(--top-padding)] min-w-[400px]'}
             />
           </div>
         </div>
@@ -302,7 +301,9 @@ const FeatureCard = (props: { card: Card; className?: string }) => {
         className={featureCardStyles['card-container__background']}
       />
       <>{props.card.content}</>
-      <div className={featureCardStyles['card-body']}>
+      <div
+        className={cn(featureCardStyles['card-body'], '[--body-inline:32px]')}
+      >
         <h5 className={'font-medium'}>{props.card.title}</h5>
         <p className={cn(featureCardStyles['card-subtitle'], 'mt-2')}>
           {props.card.subtitle}
@@ -391,12 +392,13 @@ const Polaroid = (
   );
 };
 
-const TextPill = (props: { text: string }) => {
+const TextPill = (props: { text: string; className?: string }) => {
   return (
     <div
-      className={
-        'bg-[rgb(from_var(--color-background)_r_g_b_/_70%)] px-3 py-2 rounded-full text-xs text-nowrap w-fit text-foreground'
-      }
+      className={cn(
+        'bg-[rgb(from_var(--color-background)_r_g_b_/_70%)] px-3 py-2 rounded-full text-xs text-nowrap w-fit text-foreground',
+        props.className,
+      )}
     >
       {props.text}
     </div>
@@ -475,7 +477,7 @@ const Overview = (props: { className?: string }) => {
             className={cn(
               '[--horz-padding:40px]',
               overviewStyles['overview-container'],
-              'lg:p-[calc(var(--horz-padding)*2)]',
+              'lg:p-[calc(var(--horz-padding)*1.25)]',
             )}
           >
             <h6 className={overviewStyles['story-text']}>
@@ -495,6 +497,23 @@ const Overview = (props: { className?: string }) => {
 };
 
 const CaseStudies = (props: { className?: string }) => {
+  const features = [
+    'Web Design',
+    'Logos',
+    'Slide Decks',
+    'Branding',
+    'Social media',
+    'UI/UX Design',
+    'Custom development',
+    'Mobile Apps',
+    'Print Design',
+    'Email',
+    'Display ads',
+    'Icons',
+    'Brand Guides',
+    '+ more',
+  ];
+
   const IMAGES = [
     '/assets/work-example-1.png',
     '/assets/work-example-2.png',
@@ -503,11 +522,16 @@ const CaseStudies = (props: { className?: string }) => {
   return (
     <section className={'section'}>
       <div className={cn('outer-container', props.className)}>
-        <div className={'inner-container'}>
+        <div
+          className={cn(
+            'inner-container',
+            'flex flex-col gap-4 lg:grid lg:grid-cols-2',
+          )}
+        >
           <div className={'overflow-hidden rounded-[20px] bg-white p-8'}>
             <Marquee
               className={cn(
-                'relative rotate-15 left-1/2 -translate-x-1/2',
+                'relative rotate-15 left-1/2 -translate-x-1/2 w-[200%]',
                 'mb-24',
               )}
             >
@@ -528,7 +552,41 @@ const CaseStudies = (props: { className?: string }) => {
               See recent work
             </SkeuButton>
           </div>
+          <div
+            className={
+              'bg-white md:p-20 rounded-[var(--border-radius)] p-10 flex flex-col justify-center'
+            }
+          >
+            <div
+              className={
+                'flex flex-wrap justify-center gap-x-2 gap-y-1 font-medium '
+              }
+            >
+              {features.map((feature, idx) => {
+                return (
+                  <TextPill
+                    text={feature}
+                    key={idx}
+                    className={
+                      'border-[1px] border-border border-dashed bg-transparent text-base font-normal'
+                    }
+                  />
+                );
+              })}
+            </div>
+            <div className={'text-center mt-6'}>
+              <h6 className={'font-medium'}>
+                Apps, websites,
+                <br /> logos & more
+              </h6>
+              <p className={'text-dark-gray mt-3'}>
+                All the things you need
+                <br /> under one roof.
+              </p>
+            </div>
+          </div>
         </div>
+
         <Gridlines />
       </div>
     </section>
@@ -711,17 +769,6 @@ const JoinToday = (props: { className?: string }) => {
         }
       />
     </div>
-  );
-};
-
-const FeatureList = () => {
-  return (
-    <section className={'section'}>
-      <div className={'outer-container'}>
-        <div className={'inner-container'}></div>
-        <Gridlines />
-      </div>
-    </section>
   );
 };
 

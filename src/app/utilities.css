@@ -9,8 +9,8 @@
   letter-spacing: -3px;
 
   @media screen and (min-width: 900px) {
-    font-size: 72px;
-    line-height: 70px;
+    font-size: 80px;
+    line-height: 76px;
     letter-spacing: -3px;
   };
 }
@@ -20,11 +20,11 @@
   line-height: 56px;
   letter-spacing: -2px;
 
-  @media screen and (min-width: 900px) {
+  /* @media screen and (min-width: 900px) {
     font-size: 64px;
     line-height: 64px;
     letter-spacing: -2px;
-  }
+  } */
 }
 
 @utility heading-3 {
